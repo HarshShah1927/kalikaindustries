@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Download, ShoppingCart, Eye, CheckCircle } from 'lucide-react';
+import { Search, CheckCircle } from 'lucide-react';
 
 const Products: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -50,9 +50,9 @@ const Products: React.FC = () => {
     // Saddle Clamps
     {
       id: 3,
-      name: 'PVC Pipe Saddle Clamp - 25mm',
+      name: 'PVC Pipe Hose Clamp - 25mm',
       category: 'saddle-clamps',
-      image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/pic/hoseclamp.png',
       specifications: {
         material: 'High-grade PP',
         pipeSize: '25mm',
@@ -68,73 +68,73 @@ const Products: React.FC = () => {
       id: 4,
       name: 'Metal Saddle Clamp - 32mm',
       category: 'saddle-clamps',
-      image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/pic/saddleclamp.png',
       specifications: {
         material: 'Galvanized Steel',
         pipeSize: '32mm',
         mountingHole: '8mm',
         finish: 'Zinc Plated',
-        loadCapacity: '50kg'
+        loadCapacity: '70kg'
       },
       features: ['Heavy Duty', 'Corrosion Resistant', 'Precision Fit', 'Long Lasting'],
       useCases: ['Industrial Piping', 'HVAC Systems', 'Structural Support'],
       price: '₹25'
     },
     // General Clamps
-    {
-      id: 5,
-      name: 'Cable Tie Clamp - 20mm',
-      category: 'general-clamps',
-      image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400',
-      specifications: {
-        material: 'Nylon 66',
-        bundleDiameter: '20mm max',
-        mountingHole: '5mm',
-        tensileStrength: '50lbs',
-        temperature: '-40°C to +85°C'
-      },
-      features: ['Self-Locking', 'Vibration Resistant', 'Multiple Colors', 'Easy Installation'],
-      useCases: ['Cable Management', 'Wire Bundling', 'Automotive Applications'],
-      price: '₹8'
-    },
-    {
-      id: 6,
-      name: 'Beam Clamp - Adjustable',
-      category: 'general-clamps',
-      image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400',
-      specifications: {
-        material: 'Mild Steel',
-        beamSize: '50-200mm',
-        threadSize: 'M8/M10',
-        finish: 'Galvanized',
-        loadCapacity: '200kg'
-      },
-      features: ['Adjustable Jaw', 'High Load Capacity', 'Easy Installation', 'Versatile Mounting'],
-      useCases: ['Structural Mounting', 'Suspended Systems', 'Equipment Support'],
-      price: '₹150'
-    },
+    // {
+    //   id: 5,
+    //   name: 'Cable Tie Clamp - 20mm',
+    //   category: 'general-clamps',
+    //   image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400',
+    //   specifications: {
+    //     material: 'Nylon 66',
+    //     bundleDiameter: '20mm max',
+    //     mountingHole: '5mm',
+    //     tensileStrength: '50lbs',
+    //     temperature: '-40°C to +85°C'
+    //   },
+    //   features: ['Self-Locking', 'Vibration Resistant', 'Multiple Colors', 'Easy Installation'],
+    //   useCases: ['Cable Management', 'Wire Bundling', 'Automotive Applications'],
+    //   price: '₹8'
+    // },
+    // {
+    //   id: 6,
+    //   name: 'Beam Clamp - Adjustable',
+    //   category: 'general-clamps',
+    //   image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400',
+    //   specifications: {
+    //     material: 'Mild Steel',
+    //     beamSize: '50-200mm',
+    //     threadSize: 'M8/M10',
+    //     finish: 'Galvanized',
+    //     loadCapacity: '200kg'
+    //   },
+    //   features: ['Adjustable Jaw', 'High Load Capacity', 'Easy Installation', 'Versatile Mounting'],
+    //   useCases: ['Structural Mounting', 'Suspended Systems', 'Equipment Support'],
+    //   price: '₹150'
+    // },
     // Metal Flowers
-    {
-      id: 7,
-      name: 'Decorative Rose - Large',
-      category: 'metal-flowers',
-      image: 'https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=400',
-      specifications: {
-        material: 'Mild Steel',
-        diameter: '150mm',
-        height: '300mm',
-        finish: 'Powder Coated',
-        colors: 'Multiple Options'
-      },
-      features: ['Handcrafted', 'Weather Resistant', 'Custom Colors', 'Artistic Design'],
-      useCases: ['Garden Decoration', 'Architectural Elements', 'Interior Design'],
-      price: '₹1,200'
-    },
+    // {
+    //   id: 7,
+    //   name: 'Decorative Rose - Large',
+    //   category: 'metal-flowers',
+    //   image: 'https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=400',
+    //   specifications: {
+    //     material: 'Mild Steel',
+    //     diameter: '150mm',
+    //     height: '300mm',
+    //     finish: 'Powder Coated',
+    //     colors: 'Multiple Options'
+    //   },
+    //   features: ['Handcrafted', 'Weather Resistant', 'Custom Colors', 'Artistic Design'],
+    //   useCases: ['Garden Decoration', 'Architectural Elements', 'Interior Design'],
+    //   price: '₹1,200'
+    // },
     {
       id: 8,
-      name: 'Lotus Flower Panel',
+      name: 'Metal Flower',
       category: 'metal-flowers',
-      image: 'https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/pic/metal flower.png',
       specifications: {
         material: 'Stainless Steel',
         dimensions: '600mm x 400mm',
@@ -144,7 +144,7 @@ const Products: React.FC = () => {
       },
       features: ['Premium Finish', 'Corrosion Resistant', 'Artistic Detail', 'Easy Installation'],
       useCases: ['Wall Art', 'Partition Panels', 'Corporate Interiors'],
-      price: '₹3,500'
+      price: '₹70/kg'
     }
   ];
 

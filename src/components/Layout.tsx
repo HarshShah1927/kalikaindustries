@@ -58,8 +58,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
-                <span className="text-slate-800 font-bold text-xl">K</span>
+              <div className="w-20 h-20 rounded-lg flex items-center justify-center">
+                <span className="text-slate-800 font-bold text-xl"><img src="/pic/ki logo.png" alt="" /></span>
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">

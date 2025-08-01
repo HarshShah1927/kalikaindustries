@@ -13,19 +13,19 @@ const Home: React.FC = () => {
     {
       name: 'Saddle Clamps',
       description: 'Durable saddle clamps for secure pipe and conduit mounting',
-      image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/pic/saddleclamp.png',
       features: ['Corrosion Resistant', 'Heavy Duty', 'Precision Fit']
     },
     {
       name: 'General Clamps',
       description: 'Versatile clamping solutions for various industrial applications',
-      image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/pic/hoseclamp.png',
       features: ['Multi-Purpose', 'Strong Grip', 'Long Lasting']
     },
     {
       name: 'Metal Flowers',
       description: 'Decorative metal flowers for architectural and design applications',
-      image: 'https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/pic/metal flower.png',
       features: ['Handcrafted', 'Custom Designs', 'Premium Finish']
     }
   ];
