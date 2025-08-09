@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Search, CheckCircle } from 'lucide-react';
+import { Search, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Products: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [activeImageIndex, setActiveImageIndex] = useState<{[key: number]: number}>({});
 
   const categories = [
     { id: 'all', name: 'All Products' },
@@ -19,7 +20,11 @@ const Products: React.FC = () => {
       id: 1,
       name: 'Surface Mount Box - Single Gang',
       category: 'modular-boxes',
-      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400',
+      images: [
+        'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=400'
+      ],
       specifications: {
         material: 'High-grade PVC',
         dimensions: '86mm x 86mm x 35mm',
@@ -35,7 +40,10 @@ const Products: React.FC = () => {
       id: 2,
       name: 'Junction Box - 4x4 inch',
       category: 'modular-boxes',
-      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400',
+      images: [
+        'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400'
+      ],
       specifications: {
         material: 'Galvanized Steel',
         dimensions: '100mm x 100mm x 50mm',
@@ -52,7 +60,10 @@ const Products: React.FC = () => {
       id: 3,
       name: 'PVC Pipe Hose Clamp - 25mm',
       category: 'saddle-clamps',
-      image: '/pic/hoseclamp.png',
+      images: [
+        '/pic/hoseclamp.png',
+        'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400'
+      ],
       specifications: {
         material: 'High-grade PP',
         pipeSize: '25mm',
@@ -68,7 +79,10 @@ const Products: React.FC = () => {
       id: 4,
       name: 'Metal Saddle Clamp - 32mm',
       category: 'saddle-clamps',
-      image: '/pic/saddleclamp.png',
+      images: [
+        '/pic/saddleclamp.png',
+        'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400'
+      ],
       specifications: {
         material: 'Galvanized Steel',
         pipeSize: '32mm',
@@ -134,7 +148,10 @@ const Products: React.FC = () => {
       id: 8,
       name: 'Metal Flower',
       category: 'metal-flowers',
-      image: '/pic/metal flower.png',
+      images: [
+        '/pic/metal flower.png',
+        'https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=400'
+      ],
       specifications: {
         material: 'Stainless Steel',
         dimensions: '600mm x 400mm',
@@ -147,6 +164,21 @@ const Products: React.FC = () => {
       price: '₹70/kg'
     }
   ];
+
+  const handleImageNavigation = (productId: number, direction: 'prev' | 'next', totalImages: number) => {
+    setActiveImageIndex(prev => {
+      const currentIndex = prev[productId] || 0;
+      let newIndex;
+      
+      if (direction === 'next') {
+        newIndex = currentIndex === totalImages - 1 ? 0 : currentIndex + 1;
+      } else {
+        newIndex = currentIndex === 0 ? totalImages - 1 : currentIndex - 1;
+      }
+      
+      return { ...prev, [productId]: newIndex };
+    });
+  };
 
   const filteredProducts = products.filter(product => {
     const matchesCategory = activeCategory === 'all' || product.category === activeCategory;
@@ -217,17 +249,58 @@ const Products: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200 group">
-                <div className="relative">
+               <div className="relative overflow-hidden">
                   <img
-                    src={product.image}
+                   src={product.images[activeImageIndex[product.id] || 0]}
                     alt={product.name}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-200"
                   />
+                 
+                 {/* Image Navigation */}
+                 {product.images.length > 1 && (
+                   <>
+                     <button
+                       onClick={() => handleImageNavigation(product.id, 'prev', product.images.length)}
+                       className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                     >
+                       <ChevronLeft className="w-4 h-4" />
+                     </button>
+                     <button
+                       onClick={() => handleImageNavigation(product.id, 'next', product.images.length)}
+                       className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                     >
+                       <ChevronRight className="w-4 h-4" />
+                     </button>
+                     
+                     {/* Image Indicators */}
+                     <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                       {product.images.map((_, index) => (
+                         <button
+                           key={index}
+                           onClick={() => setActiveImageIndex(prev => ({ ...prev, [product.id]: index }))}
+                           className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                             (activeImageIndex[product.id] || 0) === index 
+                               ? 'bg-white' 
+                               : 'bg-white/50 hover:bg-white/75'
+                           }`}
+                         />
+                       ))}
+                     </div>
+                   </>
+                 )}
+                 
                   <div className="absolute top-4 right-4">
                     <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-sm font-semibold">
                       {product.price}
                     </span>
                   </div>
+                 
+                 {/* Image Counter */}
+                 {product.images.length > 1 && (
+                   <div className="absolute top-4 left-4 bg-black/50 text-white px-2 py-1 rounded text-xs">
+                     {(activeImageIndex[product.id] || 0) + 1} / {product.images.length}
+                   </div>
+                 )}
                 </div>
 
                 <div className="p-6">
