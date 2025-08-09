@@ -61,8 +61,7 @@ const Products: React.FC = () => {
       name: 'PVC Pipe Hose Clamp - 25mm',
       category: 'saddle-clamps',
       images: [
-        '/pic/hoseclamp.png',
-        'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400'
+        '/pic/hoseclamp.png'
       ],
       specifications: {
         material: 'High-grade PP',
@@ -80,8 +79,7 @@ const Products: React.FC = () => {
       name: 'Metal Saddle Clamp - 32mm',
       category: 'saddle-clamps',
       images: [
-        '/pic/saddleclamp.png',
-        'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400'
+        '/pic/saddleclamp.png'
       ],
       specifications: {
         material: 'Galvanized Steel',
@@ -149,8 +147,7 @@ const Products: React.FC = () => {
       name: 'Metal Flower',
       category: 'metal-flowers',
       images: [
-        '/pic/metal flower.png',
-        'https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=400'
+        '/pic/metal flower.png'
       ],
       specifications: {
         material: 'Stainless Steel',
