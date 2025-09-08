@@ -18,43 +18,143 @@ const Products: React.FC = () => {
     // Modular Boxes
     {
       id: 1,
-      name: 'Surface Mount Box - Single Gang',
+      name: '2 Module Modular Box',
       category: 'modular-boxes',
       images: [
-        'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400',
-        'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400',
-        'https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=400'
+        '/2M/1.png',
+        '/2M/2.png',
+        '/2M/3.png'
       ],
       specifications: {
-        material: 'High-grade PVC',
-        dimensions: '86mm x 86mm x 35mm',
+        material: 'Mild Steel',
+        dimensions: '172mm x 77mm',
         rating: 'IP54',
-        voltage: '250V',
-        current: '16A'
+        Gauge: '20 & 22',
+        Coating: 'Powder Coated',
+        color: 'White/Black',
+        quality: 'ISI Marked',
+        thickness: '0.8mm & 0.6mm'
       },
-      features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options', 'Flame Retardant'],
+      features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
+      price: '₹29'
+    },
+    {
+      id: 2,
+      name: '3 Module Modular Box',
+      category: 'modular-boxes',
+      images: [
+        '/3M/4.png',
+        '/3M/5.png',
+        '/3M/3.png'
+      ],
+      specifications: {
+        material: 'Mild Steel',
+        dimensions: '172mm x 97mm',
+        rating: 'IP54',
+        Gauge: '20 & 22',
+        Coating: 'Powder Coated',
+        color: 'White/Black',
+        quality: 'ISI Marked',
+        thickness: '0.8mm & 0.6mm'
+      },
+      features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
+      price: '₹33'
+    },
+    {
+      id: 9,
+      name: '4 Module Modular Box',
+      category: 'modular-boxes',
+      images: [
+        '/4M/2.png',
+        '/4M/4.png',
+        '/4M/5.png'
+      ],
+      specifications: {
+        material: 'Mild Steel',
+        dimensions: '172mm x 130mm',
+        rating: 'IP54',
+        Gauge: '20 & 22',
+        Coating: 'Powder Coated',
+        color: 'White/Black',
+        quality: 'ISI Marked',
+        thickness: '0.8mm & 0.6mm'
+      },
+      features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
+      price: '₹37'
+    },
+    {
+      id: 10,
+      name: '6 Module Modular Box',
+      category: 'modular-boxes',
+      images: [
+        '/6M/1.png',
+        '/6M/2.png',
+        '/6M/3.png'
+      ],
+      specifications: {
+        material: 'Mild Steel',
+        dimensions: '172mm x 77mm',
+        rating: 'IP54', 
+        Gauge: '20 & 22',
+        Coating: 'Powder Coated',
+        color: 'White/Black',
+        quality: 'ISI Marked',
+        thickness: '0.8mm & 0.6mm'
+      },
+      features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
       useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
       price: '₹45'
     },
     {
-      id: 2,
-      name: 'Junction Box - 4x4 inch',
+      id: 11,
+      name: '8 Module Modular Box',
       category: 'modular-boxes',
       images: [
-        'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400',
-        'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400'
+        '/8M/5.png',
+        '/8M/3.png',
+        '/8M/2.png'
       ],
       specifications: {
-        material: 'Galvanized Steel',
-        dimensions: '100mm x 100mm x 50mm',
-        rating: 'IP65',
-        voltage: '440V',
-        current: '25A'
+        material: 'Mild Steel',
+        dimensions: '172mm x 77mm',
+        rating: 'IP54',
+        Gauge: '20 & 22',
+        Coating: 'Powder Coated',
+        color: 'White/Black',
+        quality: 'ISI Marked',
+        thickness: '0.8mm & 0.6mm'
       },
-      features: ['Corrosion Resistant', 'Deep Design', 'Knockouts Pre-cut', 'Powder Coated'],
-      useCases: ['Panel Connections', 'Junction Points', 'Cable Management'],
-      price: '₹85'
+      features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
+      price: '₹50'
     },
+    {
+      id: 12,
+      name: '12 Module Modular Box',
+      category: 'modular-boxes',
+      images: [
+        '/12M/1.png',
+        '/12M/5.png',
+        '/12M/9.png'
+      ],
+      specifications: {
+        material: 'Mild Steel',
+        dimensions: '172mm x 77mm',
+        rating: 'IP54',
+        Gauge: '20 & 22',
+        Coating: 'Powder Coated',
+        color: 'White/Black',
+        quality: 'ISI Marked',
+        thickness: '0.8mm & 0.6mm'
+      },
+      features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
+      price: '₹65'
+    },
+    
     // Saddle Clamps
     {
       id: 3,
@@ -92,56 +192,7 @@ const Products: React.FC = () => {
       useCases: ['Industrial Piping', 'HVAC Systems', 'Structural Support'],
       price: '₹25'
     },
-    // General Clamps
-    // {
-    //   id: 5,
-    //   name: 'Cable Tie Clamp - 20mm',
-    //   category: 'general-clamps',
-    //   image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400',
-    //   specifications: {
-    //     material: 'Nylon 66',
-    //     bundleDiameter: '20mm max',
-    //     mountingHole: '5mm',
-    //     tensileStrength: '50lbs',
-    //     temperature: '-40°C to +85°C'
-    //   },
-    //   features: ['Self-Locking', 'Vibration Resistant', 'Multiple Colors', 'Easy Installation'],
-    //   useCases: ['Cable Management', 'Wire Bundling', 'Automotive Applications'],
-    //   price: '₹8'
-    // },
-    // {
-    //   id: 6,
-    //   name: 'Beam Clamp - Adjustable',
-    //   category: 'general-clamps',
-    //   image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400',
-    //   specifications: {
-    //     material: 'Mild Steel',
-    //     beamSize: '50-200mm',
-    //     threadSize: 'M8/M10',
-    //     finish: 'Galvanized',
-    //     loadCapacity: '200kg'
-    //   },
-    //   features: ['Adjustable Jaw', 'High Load Capacity', 'Easy Installation', 'Versatile Mounting'],
-    //   useCases: ['Structural Mounting', 'Suspended Systems', 'Equipment Support'],
-    //   price: '₹150'
-    // },
-    // Metal Flowers
-    // {
-    //   id: 7,
-    //   name: 'Decorative Rose - Large',
-    //   category: 'metal-flowers',
-    //   image: 'https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=400',
-    //   specifications: {
-    //     material: 'Mild Steel',
-    //     diameter: '150mm',
-    //     height: '300mm',
-    //     finish: 'Powder Coated',
-    //     colors: 'Multiple Options'
-    //   },
-    //   features: ['Handcrafted', 'Weather Resistant', 'Custom Colors', 'Artistic Design'],
-    //   useCases: ['Garden Decoration', 'Architectural Elements', 'Interior Design'],
-    //   price: '₹1,200'
-    // },
+  
     {
       id: 8,
       name: 'Metal Flower',
@@ -250,7 +301,7 @@ const Products: React.FC = () => {
                   <img
                    src={product.images[activeImageIndex[product.id] || 0]}
                     alt={product.name}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-200"
+                   className="w-full object-contain max-h-96 group-hover:scale-105 transition-transform duration-200"
                   />
                  
                  {/* Image Navigation */}

@@ -7,7 +7,7 @@ const Home: React.FC = () => {
     {
       name: 'Electrical Modular Boxes',
       description: 'High-quality modular electrical boxes for industrial and residential use',
-      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/12M/1.png',
       features: ['Weather Resistant', 'Multiple Sizes', 'Easy Installation']
     },
     {
