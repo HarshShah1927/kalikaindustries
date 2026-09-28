@@ -36,8 +36,7 @@ const Products: React.FC = () => {
         thickness: '0.8mm & 0.6mm'
       },
       features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
-      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
-      price: '₹29'
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications']
     },
     {
       id: 2,
@@ -59,8 +58,7 @@ const Products: React.FC = () => {
         thickness: '0.8mm & 0.6mm'
       },
       features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
-      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
-      price: '₹33'
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications']
     },
     {
       id: 9,
@@ -82,8 +80,7 @@ const Products: React.FC = () => {
         thickness: '0.8mm & 0.6mm'
       },
       features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
-      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
-      price: '₹37'
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications']
     },
     {
       id: 10,
@@ -105,8 +102,7 @@ const Products: React.FC = () => {
         thickness: '0.8mm & 0.6mm'
       },
       features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
-      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
-      price: '₹45'
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications']
     },
     {
       id: 11,
@@ -128,8 +124,7 @@ const Products: React.FC = () => {
         thickness: '0.8mm & 0.6mm'
       },
       features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
-      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
-      price: '₹50'
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications']
     },
     {
       id: 12,
@@ -151,8 +146,7 @@ const Products: React.FC = () => {
         thickness: '0.8mm & 0.6mm'
       },
       features: ['Weather Resistant', 'Easy Installation', 'Multiple Mounting Options'],
-      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications'],
-      price: '₹65'
+      useCases: ['Residential Wiring', 'Commercial Buildings', 'Industrial Applications']
     },
     
     // Saddle Clamps
@@ -171,8 +165,7 @@ const Products: React.FC = () => {
         temperature: '-20°C to +80°C'
       },
       features: ['UV Resistant', 'Chemical Resistant', 'Easy Installation', 'Secure Grip'],
-      useCases: ['Conduit Mounting', 'Cable Routing', 'Pipe Support'],
-      price: '₹12'
+      useCases: ['Conduit Mounting', 'Cable Routing', 'Pipe Support']
     },
     {
       id: 4,
@@ -189,28 +182,8 @@ const Products: React.FC = () => {
         loadCapacity: '70kg'
       },
       features: ['Heavy Duty', 'Corrosion Resistant', 'Precision Fit', 'Long Lasting'],
-      useCases: ['Industrial Piping', 'HVAC Systems', 'Structural Support'],
-      price: '₹25'
+      useCases: ['Industrial Piping', 'HVAC Systems', 'Structural Support']
     },
-  
-    {
-      id: 8,
-      name: 'Metal Flower',
-      category: 'metal-flowers',
-      images: [
-        '/pic/metal flower.png'
-      ],
-      specifications: {
-        material: 'Stainless Steel',
-        dimensions: '600mm x 400mm',
-        thickness: '2mm',
-        finish: 'Brushed/Mirror',
-        mounting: 'Wall Mount'
-      },
-      features: ['Premium Finish', 'Corrosion Resistant', 'Artistic Detail', 'Easy Installation'],
-      useCases: ['Wall Art', 'Partition Panels', 'Corporate Interiors'],
-      price: '₹70/kg'
-    }
   ];
 
   const handleImageNavigation = (productId: number, direction: 'prev' | 'next', totalImages: number) => {
